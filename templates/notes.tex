@@ -1,0 +1,34 @@
+%St Andrews Notes Template
+\documentclass[10pt, a4paper]{article}
+
+%Formatting Packages
+\usepackage[a4paper, margin=0.5in]{geometry}
+\usepackage[extreme]{savetrees}
+\usepackage{times}
+\usepackage{multicol}
+\setlength{\columnsep}{0.5in}
+
+%Math Packages
+\usepackage{xparse}
+\usepackage{amsmath}
+\usepackage{esint}
+\usepackage{physics}
+
+\newenvironment{definition}[1]{\par \noindent \textbf{#1}: \begin{itemize} \renewcommand{\labelitemi}{$\hookrightarrow$}}{\end{itemize}}
+\newcommand{\bd}{\begin{definition}}
+\newcommand{\ed}{\end{definition}}
+
+\newcommand{\deff}[1]{\par \noindent \textit{#1}: }
+\newcommand{\dbar}{\mathrm d \hspace*{-0.2em}\bar{}\hspace*{0.2em}}
+\newcommand{\arr}{\ensuremath{\longrightarrow\ }}
+\newcommand{\larr}{$\longleftarrow\ $}
+\newcommand{\intall}{\ensuremath{\int\limits_\text{all space}}}
+\newcommand{\n}{\par \noindent}
+
+\author{Jack Symonds}
+\title{Quantum Mechanics 2}
+\date{}
+
+\begin{document}
+
+\maketitle

@@ -1,0 +1,106 @@
+\documentclass{beamer}
+
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{physics}
+
+%\setbeamertemplate{navigation symbols}{}
+
+\usetheme{default}
+\usecolortheme{beetle}
+\usefonttheme{serif}
+
+\setbeamercolor{frametitle}{fg=white}
+\setbeamercolor{background canvas}{bg=black}
+\setbeamercolor{normal text}{fg=white}
+
+\newcommand{\arr}{\ensuremath{\longrightarrow}}
+
+\title{Physical Modeling Synthesis}
+\author{Jack Symonds}
+\date{}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+\emph{Physical Modeling Synthesis}: sound synthesis based on physical models of natural musical instruments
+\end{frame}
+
+\begin{frame}
+\centering why?
+\end{frame}
+
+\begin{frame}
+\frametitle{Outline}
+\begin{itemize}
+\item<1-> context
+\item<2-> toolbox
+\item<3-> result
+\end{itemize}
+\end{frame}
+
+\section{Context}
+\begin{frame}{Strings}
+What the heck is going on?
+\begin{itemize}
+\item<1-> where are the overtones?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{History}
+\begin{itemize}
+\item ($\sim 1636$) Marin Mersenne -- confusion about heard harmonics and uniformity of vibrating string
+\item ($\sim 1701$) Joseph Sauveur -- observation of nodes and harmonics
+\item ($\sim 1713$) Brook Taylor -- string fundamental frequency \& and restoring force $\propto$ curvature 
+\item Isaac  ewtoNn
+\item ($\sim 1726$) Jean-Phillipe Rameau -- ear study
+\item ($\sim 1727$) Johann Bernoulli -- mass-spring study
+\item ($\sim 1733$) Daniel Bernoulli -- 
+\item ($\sim1746$) Jean La Rond D'Alembert -- matched Taylor's restoring force into Newton's 2nd
+\end{itemize}
+\end{frame}
+
+\section{Mathematical Toolbox}
+
+\begin{frame}{Newton's Second Law}
+\[
+\underset{\text{force}}{f(t)} = \underset{\text{mass}}{m} \ \underset{\text{acc.}}{\ddot x(t)}
+\]
+\end{frame}
+
+\begin{frame}{Wave Equation}
+\[\underbrace{K y''(x,t)}_{\substack{\text{restoring} \\ \text{force}}} = \underbrace{\epsilon \ddot y (t)}_{\substack{\text{inertial} \\ \text{force}}} \]
+$K \arr$ string tension
+\\ $\epsilon \arr$ string mass-density
+\end{frame}
+
+\begin{frame}{Difference Equations}
+\[
+p(n+1) = p(n) + T \ f(n)
+\]
+\end{frame}
+
+\begin{frame}{Finite Difference Scheme}
+computable solution to differential equation
+\[
+\dot x (t) \overset{\Delta}{=} \pdv{t} x(t) \overset{\Delta}{=} \lim _{\delta \to 0} \frac{x(t) - x(t - \delta )}{\delta} \approx \frac{x(nT) - x [(n-1)T]}{T}
+\]
+$T \arr$ sampling interval
+not physical since instantaneous changes 
+\end{frame}
+
+\begin{frame}{Vector First-Order Ordinary Differential Equations}
+(Physical State Space Models)
+\[
+\dot p = A p + B \vb u
+\]
+\end{frame}
+
+\begin{frame}{Karplus-Strong Algorithm}
+\[
+y(n) = 0.95 \left( \frac{y(n-N) + y(n-N+1)}{2} \right)
+\]
+\end{frame}
+\end{document}
