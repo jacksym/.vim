@@ -1,22 +1,13 @@
-"macvim switches
-let macvim_skip_cmd_opt_movement = 1
-set guioptions-=rL
+
+set guioptions=ec
+nnoremap <C-S-m> :set guioptions+=m<CR>
 
 "appearance
-let lightmode = 1
-colorscheme peachpuff
-set guifont=Monaco
-
-nnoremap <D-d> :call LDToggle()<CR>
-
-redir => current_colorscheme
-	silent colorscheme
-redir END
-
-function! LDToggle()
-	if g:current_colorscheme == "peachpuff"
-		execute "colorscheme desert"
-	else
-		execute "colorscheme peachpuff"
-	endif
-endfunction
+"light themes to avoid:
+"	blue
+"	delek
+"	morning
+"	shine
+"	zeliner
+colorscheme ron
+set guifont=Monospace\ Regular

@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/jack/.vim/ftplugin'
+let g:netrw_dirhist_2='/home/jack/.vim/templates'
+let g:netrw_dirhist_3='/home/jack/.vim/ftplugin'
+let g:netrw_dirhist_4='/home/jack/.vim/templates'
