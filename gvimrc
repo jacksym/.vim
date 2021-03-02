@@ -1,6 +1,8 @@
 
-set guioptions=ec
+set guioptions=cd
+"set guiheadroom=0
 nnoremap <C-S-m> :set guioptions+=m<CR>
+set autochdir
 
 "appearance
 "light themes to avoid:
@@ -9,5 +11,6 @@ nnoremap <C-S-m> :set guioptions+=m<CR>
 "	morning
 "	shine
 "	zeliner
-colorscheme ron
-set guifont=Monospace\ Regular
+set guifont=Monego\ Regular\ 12
+set background=dark
+colorscheme dracula
