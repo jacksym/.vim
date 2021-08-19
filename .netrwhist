@@ -1,4 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/home/jack/notes'
-let g:netrw_dirhist_2='/home/jack/notes/cmp'
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/home/jack'
+let g:netrw_dirhist_8='/home/jack/.vim/ftplugin'
+let g:netrw_dirhist_7='/home/jack/lec'
+let g:netrw_dirhist_6='/home/jack/.vim/ftplugin'
+let g:netrw_dirhist_5='/home/jack/lec'
+let g:netrw_dirhist_4='/home/jack/prj'
+let g:netrw_dirhist_3='/home/jack/.vim/ftplugin'
+let g:netrw_dirhist_2='/home/jack/lec'
+let g:netrw_dirhist_1='/home/jack/prj'
+let g:netrw_dirhist_0='/home/jack/.vim/ftplugin'

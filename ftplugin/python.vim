@@ -3,4 +3,4 @@
 setlocal nowrap
 setlocal cursorline
 
-noremap <buffer> <leader>p :w<CR>:!python3 %<CR>
+noremap <buffer> <leader>c :w<CR>:!python3 %<CR>

@@ -11,6 +11,5 @@ set autochdir
 "	morning
 "	shine
 "	zeliner
-set guifont=Monego\ Regular\ 12
-set background=dark
-colorscheme dracula
+set guifont=Monego\ Regular\ 14
+"  set background=dark
