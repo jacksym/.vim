@@ -12,4 +12,4 @@ set autochdir
 "	shine
 "	zeliner
 set guifont=Monego\ Regular\ 14
-"  set background=dark
+set background=dark

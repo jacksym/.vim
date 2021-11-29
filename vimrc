@@ -3,8 +3,9 @@
 
 filetype plugin on
 
-packadd! dracula
-colorscheme dracula
+"packadd! dracula
+"colorscheme dracula
+colorscheme solarized
 
 "my configs
 syntax enable
@@ -33,7 +34,7 @@ let mapleader="\<Space>"
 noremap <leader>v :e ~/.vim/vimrc<CR>
 noremap <leader>g :e ~/.vim/gvimrc<CR>
 noremap <leader>u :e ~/.vim/ftplugin/<CR>
-noremap <leader>f :vsp<CR>:E<CR>
+noremap <leader>f :E<CR>
 noremap <leader>n :vsp<CR>:enew<CR>
 "let g:netrw_banner = 0
 "let g:netrw_liststyle = 1
@@ -45,6 +46,10 @@ nnoremap <leader>h <C-w>h
 nnoremap <leader>j <C-w>j
 nnoremap <leader>k <C-w>k
 nnoremap <leader>l <C-w>l
+nnoremap <leader>H <C-w>H
+nnoremap <leader>J <C-w>J
+nnoremap <leader>K <C-w>K
+nnoremap <leader>L <C-w>L
 "nnoremap <leader>c <C-w>c
 
 "au BufNewFile,BufRead *.c set filetype=c
@@ -52,5 +57,4 @@ au BufNewFile,BufRead *.cpp set filetype=cpp
 au BufNewFile,BufRead *.tex set filetype=tex
 au BufNewFile,BufRead *.py set filetype=python
 au BufNewFile,BufRead *.tsv set filetype=tsv
-au BufNewFile,BufRead *.md set filetype=markdown
 au BufNewFile,BufRead *.txt set filetype=txt
