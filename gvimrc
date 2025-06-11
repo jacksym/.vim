@@ -4,12 +4,18 @@ set guioptions=cd
 nnoremap <C-S-m> :set guioptions+=m<CR>
 set autochdir
 
-"appearance
+filetype plugin on
+
+packadd! dracula
+" colorscheme dracula
+colorscheme shades_of_purple
+
 "light themes to avoid:
 "	blue
 "	delek
 "	morning
 "	shine
 "	zeliner
-set guifont=Monego\ Regular\ 14
+" colorscheme pencil
+set gfn=Monaco:h18
 set background=dark

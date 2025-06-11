@@ -1,12 +1,6 @@
 "Jack Symonds ~/.vimrc
 
 
-filetype plugin on
-
-"packadd! dracula
-"colorscheme dracula
-colorscheme solarized
-
 "my configs
 syntax enable
 set nocompatible
@@ -23,6 +17,7 @@ set noswapfile
 set smartcase
 set shortmess=I
 set fillchars+=vert:\ 
+set scrolloff=8
 "set colorcolumn=80
 
 vnoremap <C-c> "+y
@@ -31,30 +26,39 @@ inoremap <M-Backspace> <C-w>
 
 "more
 let mapleader="\<Space>"
-noremap <leader>v :e ~/.vim/vimrc<CR>
-noremap <leader>g :e ~/.vim/gvimrc<CR>
-noremap <leader>u :e ~/.vim/ftplugin/<CR>
-noremap <leader>f :E<CR>
-noremap <leader>n :vsp<CR>:enew<CR>
-"let g:netrw_banner = 0
-"let g:netrw_liststyle = 1
-"let g:netrw_altv = 1
+noremap <leader>i :e ~/.vim/<CR>
+"noremap <leader>u :e ~/.vim/ftplugin/<CR>
+noremap <leader>d :E<CR>
+" noremap <leader>n :vsp<CR>:enew<CR>
+
+let g:netrw_banner = 0
+let g:netrw_liststyle = 1
+let g:netrw_altv = 1
+let g:netrw_sort_options = "i"
 "let g:netrw_winsize = 45
+"let g:netrw_sort_sequence = '[\/]$,*,'
 
 "windows
-nnoremap <leader>h <C-w>h
-nnoremap <leader>j <C-w>j
-nnoremap <leader>k <C-w>k
-nnoremap <leader>l <C-w>l
-nnoremap <leader>H <C-w>H
-nnoremap <leader>J <C-w>J
-nnoremap <leader>K <C-w>K
-nnoremap <leader>L <C-w>L
-"nnoremap <leader>c <C-w>c
+nnoremap <leader>wv <C-w>v
+nnoremap <leader>ws <C-w>s
+nnoremap <leader>wo <C-w>o
+nnoremap <leader>wc <C-w>c
+nnoremap ˙ <C-w>h
+nnoremap ∆ <C-w>j
+nnoremap ˚ <C-w>k
+nnoremap ¬ <C-w>l
+nnoremap Ó :tabprev<CR>
+nnoremap Ò :tabnext<CR>
+
+
+nnoremap <leader><M-h> <C-w>H
+nnoremap <leader><M-j> <C-w>J
+nnoremap <leader><M-k> <C-w>K
+nnoremap <leader><M-l> <C-w>L
 
 "au BufNewFile,BufRead *.c set filetype=c
-au BufNewFile,BufRead *.cpp set filetype=cpp
-au BufNewFile,BufRead *.tex set filetype=tex
-au BufNewFile,BufRead *.py set filetype=python
-au BufNewFile,BufRead *.tsv set filetype=tsv
-au BufNewFile,BufRead *.txt set filetype=txt
+"au BufNewFile,BufRead *.cpp set filetype=cpp
+"au BufNewFile,BufRead *.tex set filetype=tex
+"au BufNewFile,BufRead *.py set filetype=python
+"au BufNewFile,BufRead *.tsv set filetype=tsv
+"au BufNewFile,BufRead *.txt set filetype=txt
