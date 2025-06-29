@@ -17,5 +17,13 @@ colorscheme shades_of_purple
 "	shine
 "	zeliner
 " colorscheme pencil
-set gfn=Monaco:h18
+
+if has("win32") || has("win64")
+	set guifont=Consolas:h15
+elseif has("unix")
+	set guifont=Monaco\ 11
+endif
+
+
+
 set background=dark
