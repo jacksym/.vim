@@ -6,9 +6,8 @@ set autochdir
 
 filetype plugin on
 
-packadd! dracula
-" colorscheme dracula
-colorscheme shades_of_purple
+colorscheme pencil
+" colorscheme slate
 
 "light themes to avoid:
 "	blue
@@ -16,12 +15,12 @@ colorscheme shades_of_purple
 "	morning
 "	shine
 "	zeliner
-" colorscheme pencil
 
 if has("win32") || has("win64")
 	set guifont=Consolas:h15
+elseif has("mac")
+	set guifont=Monaco:h14
 elseif has("unix")
-	set guifont=Monaco\ 11
 endif
 
 
