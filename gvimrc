@@ -1,7 +1,6 @@
 
-set guioptions=cd
+set guioptions=cdm
 "set guiheadroom=0
-nnoremap <C-S-m> :set guioptions+=m<CR>
 set autochdir
 
 filetype plugin on
@@ -9,20 +8,12 @@ filetype plugin on
 colorscheme pencil
 " colorscheme slate
 
-"light themes to avoid:
-"	blue
-"	delek
-"	morning
-"	shine
-"	zeliner
-
 if has("win32") || has("win64")
 	set guifont=Consolas:h15
 elseif has("mac")
 	set guifont=Monaco:h14
 elseif has("unix")
+	set guifont=DejaVu\ Sans\ Mono:h13
 endif
-
-
 
 set background=dark

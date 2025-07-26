@@ -17,13 +17,16 @@ set noswapfile
 set smartcase
 set shortmess=I
 set fillchars+=vert:\ 
-set scrolloff=8
+set scrolloff=3
 "set colorcolumn=80
 
 if has("win32") || has("win64")
+	noremap <leader>i :e ~/vimfiles/<CR>
 elseif has("mac")
+	noremap <leader>i :e ~/.vim/<CR>
 	set macmeta
 elseif has("unix")
+	noremap <leader>i :e ~/.vim/<CR>
 endif
 
 vnoremap <C-c> "+y
@@ -32,8 +35,6 @@ inoremap <M-Backspace> <C-w>
 
 "more
 let mapleader="\<Space>"
-noremap <leader>i :e ~/.vim/<CR>
-"noremap <leader>u :e ~/.vim/ftplugin/<CR>
 noremap <leader>d :E<CR>
 noremap <leader>f :e 
 " noremap <leader>n :vsp<CR>:enew<CR>
@@ -66,8 +67,3 @@ nnoremap <leader><M-k> <C-w>K
 nnoremap <leader><M-l> <C-w>L
 
 "au BufNewFile,BufRead *.c set filetype=c
-"au BufNewFile,BufRead *.cpp set filetype=cpp
-"au BufNewFile,BufRead *.tex set filetype=tex
-"au BufNewFile,BufRead *.py set filetype=python
-"au BufNewFile,BufRead *.tsv set filetype=tsv
-"au BufNewFile,BufRead *.txt set filetype=txt
