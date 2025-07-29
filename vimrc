@@ -18,6 +18,7 @@ set smartcase
 set shortmess=I
 set fillchars+=vert:\ 
 set scrolloff=3
+set wildmenu
 "set colorcolumn=80
 
 if has("win32") || has("win64")
@@ -37,16 +38,15 @@ inoremap <M-Backspace> <C-w>
 let mapleader="\<Space>"
 noremap <leader>d :E<CR>
 noremap <leader>f :e 
+nnoremap <leader><leader> :b<Space>
 " noremap <leader>n :vsp<CR>:enew<CR>
 
 let g:netrw_banner = 0
 let g:netrw_liststyle = 1
 let g:netrw_altv = 1
 let g:netrw_sort_options = "i"
-let g:netrw_sort_by = "exten"
 let g:netrw_sort_direction = "normal"
-"let g:netrw_winsize = 45
-"let g:netrw_sort_sequence = '[\/]$,*,'
+let g:netrw_sort_sequence = '[\/]$,*,'
 
 "windows
 nnoremap <leader>wv <C-w>v
@@ -65,5 +65,6 @@ nnoremap <leader><M-h> <C-w>H
 nnoremap <leader><M-j> <C-w>J
 nnoremap <leader><M-k> <C-w>K
 nnoremap <leader><M-l> <C-w>L
+
 
 "au BufNewFile,BufRead *.c set filetype=c
