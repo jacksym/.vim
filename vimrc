@@ -1,6 +1,5 @@
 "Jack Symonds ~/.vimrc
 
-
 "my configs
 syntax enable
 set nocompatible
@@ -37,7 +36,8 @@ inoremap <M-Backspace> <C-w>
 "more
 let mapleader="\<Space>"
 noremap <leader>d :E<CR>
-noremap <leader>f :e 
+noremap <leader>f :call feedkeys(":e " . fnameescape(expand('%:p:h')) . '/', 'n')<CR>
+cnoremap <M-Backspace> <C-W>
 nnoremap <leader><leader> :b<Space>
 " noremap <leader>n :vsp<CR>:enew<CR>
 
@@ -49,8 +49,10 @@ let g:netrw_sort_direction = "normal"
 let g:netrw_sort_sequence = '[\/]$,*,'
 
 "windows
-nnoremap <leader>wv <C-w>v
-nnoremap <leader>ws <C-w>s
+set splitbelow
+set splitright
+nnoremap <leader>wv <C-w>v<C-w>h
+nnoremap <leader>ws <C-w>s<C-w>k
 nnoremap <leader>wo <C-w>o
 nnoremap <leader>wc <C-w>c
 nnoremap <M-h> <C-w>h
