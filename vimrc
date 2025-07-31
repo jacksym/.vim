@@ -1,5 +1,6 @@
 "Jack Symonds ~/.vimrc
 
+set shortmess+=I
 
 "my configs
 syntax enable
@@ -15,7 +16,6 @@ set shiftwidth=4
 set noexpandtab
 set noswapfile
 set smartcase
-set shortmess=I
 set fillchars+=vert:\ 
 set scrolloff=3
 set wildmenu
