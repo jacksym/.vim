@@ -1,6 +1,6 @@
 "Jack Symonds ~/.vimrc
 
-set shortmess+=I
+set shortmess=IfilnxtToO
 
 "my configs
 syntax enable
@@ -37,7 +37,7 @@ inoremap <M-Backspace> <C-w>
 "more
 let mapleader="\<Space>"
 noremap <leader>d :E<CR>
-noremap <leader>f :call feedkeys(":e " . fnameescape(expand('%:p:h')) . '/', 'n')<CR>
+noremap <leader>f :e<Space>
 cnoremap <M-Backspace> <C-W>
 nnoremap <leader><leader> :b<Space>
 " noremap <leader>n :vsp<CR>:enew<CR>
@@ -56,10 +56,14 @@ nnoremap <leader>wv <C-w>v<C-w>h
 nnoremap <leader>ws <C-w>s<C-w>k
 nnoremap <leader>wo <C-w>o
 nnoremap <leader>wc <C-w>c
-nnoremap <M-h> <C-w>h
-nnoremap <M-j> <C-w>j
-nnoremap <M-k> <C-w>k
-nnoremap <M-l> <C-w>l
+nnoremap <leader>wh <C-w>h
+nnoremap <leader>wj <C-w>j
+nnoremap <leader>wk <C-w>k
+nnoremap <leader>wl <C-w>l
+"nnoremap <M-h> <C-w>h
+"nnoremap <M-j> <C-w>j
+"nnoremap <M-k> <C-w>k
+"nnoremap <M-l> <C-w>l
 nnoremap <M-H> :tabprev<CR>
 nnoremap <M-L> :tabnext<CR>
 

@@ -1,5 +1,7 @@
 
-set guioptions=cdm
+set guioptions=mcd
+"aunmenu Help
+
 "set guiheadroom=0
 set autochdir
 
