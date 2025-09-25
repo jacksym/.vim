@@ -25,7 +25,6 @@ if has("win32") || has("win64")
 	noremap <leader>i :e ~/vimfiles/<CR>
 elseif has("mac")
 	noremap <leader>i :e ~/.vim/<CR>
-	set macmeta
 elseif has("unix")
 	noremap <leader>i :e ~/.vim/<CR>
 endif

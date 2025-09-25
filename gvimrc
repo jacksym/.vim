@@ -13,6 +13,7 @@ colorscheme pencil
 if has("win32") || has("win64")
 	set guifont=Consolas:h15
 elseif has("mac")
+	set macmeta
 	set guifont=Monaco:h14
 elseif has("unix")
 	set guifont=DejaVu\ Sans\ Mono:h13
