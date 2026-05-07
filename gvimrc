@@ -11,7 +11,7 @@ colorscheme pencil
 " colorscheme slate
 
 if has("win32") || has("win64")
-	set guifont=Consolas:h15
+	set guifont=Consolas:h12
 elseif has("mac")
 	set macmeta
 	set guifont=Monaco:h14
