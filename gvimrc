@@ -9,6 +9,9 @@ filetype plugin on
 
 colorscheme catppuccin
 
+set noerrorbells
+set vb t_vb=
+
 if has("win32") || has("win64")
 	set guifont=Consolas:h12
 elseif has("mac")

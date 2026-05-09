@@ -15,15 +15,12 @@ set shiftwidth=4
 set noexpandtab
 set noswapfile
 set smartcase
-set fillchars+=vert:\ 
 set scrolloff=3
 set wildmenu
-"set colorcolumn=80
 set splitbelow
 set splitright
 set nowrap
 set wildoptions=pum
-"autocmd BufRead,BufNewFile *.vim setlocal number
 autocmd Filetype *.vim setlocal number
 
 
@@ -41,3 +38,4 @@ tnoremap <C-c> "+y
 
 let g:vimdir = fnamemodify($MYVIMRC, ':h')
 execute 'source' fnameescape(g:vimdir . '/keymap.vim')
+
