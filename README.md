@@ -33,13 +33,15 @@ sudo dnf install python3-lsp-server
 ```
 
 C++
-Linux:
-```
-sudo apt install clangd
-```
-MacOS:
-```
-brew install clangd
-```
-Windows:
+--Linux:
+` sudo apt install clangd `
+--MacOS:
+` brew install clangd `
+--Windows:
 [Download the installer here](https://releases.llvm.org/download.html)
+
+C#:
+[Download from the releases page](https://github.com/OmniSharp/omnisharp-roslyn/releases)
+-- Linux:   omnisharp-linux-x64-net...
+-- MacOS:   omnisharp-osx-arm64-net...
+-- Windows: omnisharp-win-x64-net...

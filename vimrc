@@ -40,6 +40,7 @@ tnoremap <C-c> "+y
 
 let g:vimdir = fnamemodify($MYVIMRC, ':h')
 execute 'source' fnameescape(g:vimdir . '/keymap.vim')
+execute 'source' fnameescape(g:vimdir . '/lsp.vim')
 
 "custom languages
 au BufRead,BufNewFile *.scr	set filetype=STOL
