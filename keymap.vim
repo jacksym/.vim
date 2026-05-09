@@ -6,14 +6,11 @@ vnoremap <C-c> "+y
 inoremap <C-v> <Esc>"+Pa
 inoremap <M-Backspace> <C-w>
 
-"more
 noremap <leader>d <Cmd>E<CR>
 noremap <leader>f :e<Space>
 cnoremap <M-Backspace> <C-W>
 noremap <leader><leader> :b<Space>
-" noremap <leader>n :vsp<CR>:enew<CR>
 
-"nnoremap <leader>i :execute 'edit ' . fnameescape(fnamemodify($MYVIMRC, ':h')) . '/'<CR>
 noremap <leader>i <Cmd>execute 'edit ' . fnameescape(g:vimdir) . '/'<CR>
 
 noremap <leader>wv <C-w>v<C-w>h
@@ -26,8 +23,6 @@ noremap <leader>wk <C-w>k
 noremap <leader>wl <C-w>l
 noremap <M-H> <Cmd>tabprev<CR>
 noremap <M-L> <Cmd>tabnext<CR>
-
-
 noremap <leader>wH <C-w>H
 noremap <leader>wJ <C-w>J
 noremap <leader>wK <C-w>K
