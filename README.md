@@ -18,3 +18,28 @@ HOME: `C:\Users\<USER>`
 "C:\Program Files\Vim\vim92\gvim.exe" --remote-tab-silent "%1"
 ```
 
+## LSP Setup
+
+### Install LSP Servers
+Python
+(OS agnostic):
+```
+pip3 install "python-lsp-server[all]"
+```
+Linux:
+```
+sudo apt install python3-pylsp
+sudo dnf install python3-lsp-server
+```
+
+C++
+Linux:
+```
+sudo apt install clangd
+```
+MacOS:
+```
+brew install clangd
+```
+Windows:
+[Download the installer here](https://releases.llvm.org/download.html)

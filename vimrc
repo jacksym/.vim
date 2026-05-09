@@ -13,10 +13,10 @@ set noswapfile
 set smartcase
 set scrolloff=3
 set wildmenu
+set wildoptions=pum
+set nowrap
 set splitbelow
 set splitright
-set nowrap
-set wildoptions=pum
 autocmd Filetype *.vim setlocal number
 
 set smartindent
@@ -41,3 +41,6 @@ tnoremap <C-c> "+y
 let g:vimdir = fnamemodify($MYVIMRC, ':h')
 execute 'source' fnameescape(g:vimdir . '/keymap.vim')
 
+"custom languages
+au BufRead,BufNewFile *.scr	set filetype=STOL
+au BufRead,BufNewFile *.script set filetype=GMAT
