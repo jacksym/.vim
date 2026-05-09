@@ -7,8 +7,7 @@ set autochdir
 
 filetype plugin on
 
-colorscheme pencil
-" colorscheme slate
+colorscheme catppuccin
 
 if has("win32") || has("win64")
 	set guifont=Consolas:h12

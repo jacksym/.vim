@@ -5,7 +5,6 @@ set shortmess=IfilnxtToO
 "my configs
 syntax enable
 set nocompatible
-set number
 set incsearch
 set ruler
 set linebreak
@@ -23,9 +22,9 @@ set wildmenu
 set splitbelow
 set splitright
 set nowrap
-
-
-if has("win32") || has("win64") elseif has("mac") elseif has("unix") endif
+set wildoptions=pum
+"autocmd BufRead,BufNewFile *.vim setlocal number
+autocmd Filetype *.vim setlocal number
 
 
 let g:netrw_banner = 0
@@ -34,8 +33,11 @@ let g:netrw_altv = 1
 let g:netrw_sort_options = "i"
 let g:netrw_sort_direction = "normal"
 let g:netrw_sort_by = 'exten'
-"let g:netrw_sort_sequence = '[\/]$,\.c$,\.h$,\.txt$,*'
+"let :netrw_sort_sequence = '[\/]$,\.c$,\.h$,\.txt$,*'
 
+"terminal
+tnoremap <Esc> <C-\><C-n>
+tnoremap <C-c> "+y
 
 let g:vimdir = fnamemodify($MYVIMRC, ':h')
 execute 'source' fnameescape(g:vimdir . '/keymap.vim')

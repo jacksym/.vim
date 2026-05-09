@@ -1,3 +1,4 @@
+setlocal number
 setlocal wrap
 setlocal linebreak
 setlocal nosmartindent

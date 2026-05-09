@@ -7,36 +7,36 @@ inoremap <C-v> <Esc>"+Pa
 inoremap <M-Backspace> <C-w>
 
 "more
-noremap <leader>d :E<CR>
+noremap <leader>d <Cmd>E<CR>
 noremap <leader>f :e<Space>
 cnoremap <M-Backspace> <C-W>
-nnoremap <leader><leader> :b<Space>
+noremap <leader><leader> :b<Space>
 " noremap <leader>n :vsp<CR>:enew<CR>
 
 "nnoremap <leader>i :execute 'edit ' . fnameescape(fnamemodify($MYVIMRC, ':h')) . '/'<CR>
-nnoremap <leader>i :execute 'edit ' . fnameescape(g:vimdir) . '/'<CR>
+noremap <leader>i <Cmd>execute 'edit ' . fnameescape(g:vimdir) . '/'<CR>
 
-nnoremap <leader>wv <C-w>v<C-w>h
-nnoremap <leader>ws <C-w>s<C-w>k
-nnoremap <leader>wo <C-w>o
-nnoremap <leader>wc <C-w>c
-nnoremap <leader>wh <C-w>h
-nnoremap <leader>wj <C-w>j
-nnoremap <leader>wk <C-w>k
-nnoremap <leader>wl <C-w>l
-nnoremap <M-H> :tabprev<CR>
-nnoremap <M-L> :tabnext<CR>
+noremap <leader>wv <C-w>v<C-w>h
+noremap <leader>ws <C-w>s<C-w>k
+noremap <leader>wo <C-w>o
+noremap <leader>wc <C-w>c
+noremap <leader>wh <C-w>h
+noremap <leader>wj <C-w>j
+noremap <leader>wk <C-w>k
+noremap <leader>wl <C-w>l
+noremap <M-H> <Cmd>tabprev<CR>
+noremap <M-L> <Cmd>tabnext<CR>
 
 
-nnoremap <leader>wH <C-w>H
-nnoremap <leader>wJ <C-w>J
-nnoremap <leader>wK <C-w>K
-nnoremap <leader>wL <C-w>L
+noremap <leader>wH <C-w>H
+noremap <leader>wJ <C-w>J
+noremap <leader>wK <C-w>K
+noremap <leader>wL <C-w>L
 
-nnoremap <leader>gl :vimgrep /<C-R><C-W>/gj **/*<CR>:copen<CR>
-vnoremap <leader>gl y:execute 'vimgrep /' . escape(@", '/\') . '/gj **/*'<CR>:copen<CR>
-nnoremap gn :cnext<CR>
-nnoremap gp :cprev<CR>
+nnoremap <leader>gl <Cmd>vimgrep /<C-R><C-W>/gj **/*<CR><Cmd>copen<CR>
+vnoremap <leader>gl y<Cmd>execute 'vimgrep /' . escape(@", '/\') . '/gj **/*'<CR><Cmd>copen<CR>
+nnoremap gn <Cmd>cnext<CR>
+nnoremap gp <Cmd>cprev<CR>
 
 function! VimgrepPrompt() abort
   call inputsave()
@@ -53,6 +53,6 @@ function! VimgrepPrompt() abort
   copen
 endfunction
 
-nnoremap <leader>gg :call VimgrepPrompt()<CR>
+nnoremap <leader>gg <Cmd>call VimgrepPrompt()<CR>
 
 

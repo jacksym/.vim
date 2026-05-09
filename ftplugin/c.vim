@@ -1,5 +1,6 @@
 "Jack Symonds C
 
+setlocal number
 setlocal nowrap
 
 

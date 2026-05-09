@@ -4,6 +4,7 @@ setlocal wrap
 setlocal linebreak
 setlocal nosmartindent
 setlocal noautoindent
+setlocal number
 "let b:filename = expand('%:p')
 
 "noremap <buffer> <leader>T :w<CR>:!pdflatex -output-directory ~/Desktop/latexPDFs %<CR><CR>

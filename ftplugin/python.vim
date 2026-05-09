@@ -1,5 +1,6 @@
 "Jack Symonds Python
 
+setlocal number
 setlocal nowrap
 setlocal cursorline
 
