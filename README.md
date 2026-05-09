@@ -22,11 +22,8 @@ HOME: `C:\Users\<USER>`
 
 ### Install LSP Servers
 Python
-(OS agnostic):
-```
-pip3 install "python-lsp-server[all]"
-```
-Linux:
+- (OS agnostic): ` pip3 install "python-lsp-server[all]" `
+- Linux:
 ```
 sudo apt install python3-pylsp
 sudo dnf install python3-lsp-server
