@@ -17,6 +17,9 @@ HOME: `C:\Users\<USER>`
 ```
 "C:\Program Files\Vim\vim92\gvim.exe" --remote-tab-silent "%1"
 ```
+### As Tortoise Diff Viewer
+1. Tortoise>Settings>Diff Viewer --> (click External)
+2. `C:\Program Files\Vim\vim92\gvim.exe -d %base %mine`
 
 ## LSP Setup
 
@@ -39,3 +42,20 @@ C#:
 - Linux:   omnisharp-linux-x64-net...
 - MacOS:   omnisharp-osx-arm64-net...
 - Windows: omnisharp-win-x64-net...
+
+### C/C++ Build Flags w/ CMake
+clangd will look in the parent directories of the files you edit looking for it,
+and also in subdirectories named `build/`.
+For example, if editing `$SRC/gui/window.cpp`,
+we search in `$SRC/gui/`, `$SRC/gui/build/`, `$SRC/`, `$SRC/build/`, …
+
+Run this to do it:
+```
+cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1
+```
+`compile_commands.json` will be written to your build directory.
+If your build directory is `$SRC` or `$SRC/build`, clangd will find it.
+Otherwise, symlink or copy it to `$SRC`, the root of your source tree.
+```
+ln -s ~/myproject-build/compile_commands.json ~/myproject/
+```

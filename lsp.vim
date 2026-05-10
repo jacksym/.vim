@@ -27,8 +27,14 @@ function! s:on_lsp_buffer_enabled() abort
     let g:lsp_format_sync_timeout = 1000
     autocmd! BufWritePre *.rs,*.go call execute('LspDocumentFormatSync')
     
-    " refer to doc to add more commands
 endfunction
+
+"set foldmethod=expr
+"  \ foldexpr=lsp#ui#vim#folding#foldexpr()
+"  \ foldtext=lsp#ui#vim#folding#foldtext()
+
+
+let g:lsp_diagnostics_echo_cursor = 0
 
 augroup lsp_install
     au!
