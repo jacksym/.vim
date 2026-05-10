@@ -26,14 +26,12 @@ set shiftwidth=4
 set noexpandtab
 
 let g:netrw_banner = 0
-let g:netrw_liststyle = 1
-"let g:netrw_liststyle = 0
+let g:netrw_liststyle = 0 "g:netrw_liststyle=1 significanlty messes with sorting/hiding
 let g:netrw_altv = 1
 let g:netrw_sort_options = "i"
 let g:netrw_sort_direction = "normal"
 let g:netrw_sort_by = 'exten'
 let g:netrw_list_hide = '^\.\.\=/'
-"let :netrw_sort_sequence = '[\/]$,\.c$,\.h$,\.txt$,*'
 
 "terminal
 tnoremap <Esc> <C-\><C-n>
