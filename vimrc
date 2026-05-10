@@ -39,8 +39,15 @@ tnoremap <C-c> "+y
 
 let g:vimdir = fnamemodify($MYVIMRC, ':h')
 execute 'source' fnameescape(g:vimdir . '/keymap.vim')
-execute 'source' fnameescape(g:vimdir . '/lsp.vim')
 
 "custom languages
 au BufRead,BufNewFile *.scr	set filetype=STOL
 au BufRead,BufNewFile *.script set filetype=GMAT
+
+call plug#begin(g:vimdir . '/plugged')
+Plug 'Exafunction/windsurf.vim', { 'branch': 'main' }
+Plug 'prabirshrestha/vim-lsp'
+Plug 'prabirshrestha/asyncomplete.vim'
+call plug#end()
+
+execute 'source' fnameescape(g:vimdir . '/lsp.vim')

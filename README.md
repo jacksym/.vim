@@ -34,7 +34,7 @@ sudo dnf install python3-lsp-server
 
 C++
 - Linux: ` sudo apt install clangd `
-- MacOS: ` brew install clangd `
+- MacOS: ` brew install llvm `
 - Windows: [Download the installer here](https://releases.llvm.org/download.html)
 
 C#:
@@ -59,3 +59,12 @@ Otherwise, symlink or copy it to `$SRC`, the root of your source tree.
 ```
 ln -s ~/myproject-build/compile_commands.json ~/myproject/
 ```
+
+## TODO:
+- get clangd to work on MacOS --> and Windows
+- remove diagnostic messages in pseudo lines
+- get project behavior
+    - understand working directory behavior
+    - with vimgrep path
+- Visual Studio solution file --> CMake only
+- vim's make
