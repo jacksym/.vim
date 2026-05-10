@@ -9,6 +9,7 @@ set incsearch
 set ruler
 set linebreak
 "set autoindent
+filetype plugin indent on
 set noswapfile
 set smartcase
 set scrolloff=3
