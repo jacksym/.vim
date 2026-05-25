@@ -4,3 +4,4 @@ setlocal nowrap
 setlocal number
 
 setlocal colorcolumn=80
+

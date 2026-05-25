@@ -1,4 +1,4 @@
-"Jack Symonds Table Plugin
+"Jack Symonds Table ftplugin
 
 setlocal cursorline
 setlocal tabstop=10 softtabstop=10

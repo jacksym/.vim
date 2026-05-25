@@ -34,20 +34,37 @@ nnoremap gn <Cmd>cnext<CR>
 nnoremap gp <Cmd>cprev<CR>
 
 function! VimgrepPrompt() abort
-  call inputsave()
-  let l:pat = input('Search: ')
-  call inputrestore()
-
-  if empty(l:pat)
-    echo 'Cancelled'
-    return
-  endif
-
-  call setqflist([], 'r')
-  execute 'vimgrep /\V' . escape(l:pat, '\/') . '/gj **/*'
-  copen
-endfunction
+    call inputsave()
+    let l:pat = input('Search: ')
+    call inputrestore()
+  
+    if empty(l:pat)
+        echo 'Cancelled'
+        return
+    endif
+  
+    call setqflist([], 'r')
+    execute 'vimgrep /\V' . escape(l:pat, '\/') . '/gj **/*'
+    copen
+  endfunction
 
 nnoremap <leader>gg <Cmd>call VimgrepPrompt()<CR>
+
+
+"function! ToggleComment() abort
+"
+"    if !exists('b:comment_start')
+"        echoerr 'No b:comment_start set for this filetype'
+"        return
+"    endif
+"    let l:cs = escape(b:comment_start, '\&')
+"    let l:line = getline('.')
+"    if l:line =~# '^\s*' . escape(b:comment_start, '\.*[]~')
+"        execute 's/^\(\s*\)' . l:cs . '\s\?/\1/'
+"    else
+"        call setline('.', substitute(l:line, '^\s*', '&' . b:comment_start . ' ', ''))
+"    endif
+"
+"endfunction
 
 
