@@ -25,6 +25,7 @@ set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
 
+let g:netrw_keepdir = 1
 let g:netrw_banner = 0
 let g:netrw_liststyle = 0 "g:netrw_liststyle=1 significantly messes with sorting/hiding
 let g:netrw_altv = 1

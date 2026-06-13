@@ -69,3 +69,4 @@ ln -s ~/myproject-build/compile_commands.json ~/myproject/
     - with vimgrep path
 - Visual Studio solution file --> CMake only
 - vim's make
+- recent files?
