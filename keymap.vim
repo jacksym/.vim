@@ -7,6 +7,7 @@ inoremap <C-v> <Esc>"+Pa
 inoremap <M-Backspace> <C-w>
 
 noremap <leader>d <Cmd>E<CR>
+noremap - <Cmd>E<CR>
 noremap <leader>f :e<Space>
 cnoremap <M-Backspace> <C-W>
 noremap <leader><leader> :b<Space>
