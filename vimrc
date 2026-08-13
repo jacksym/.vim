@@ -57,7 +57,7 @@ packadd comment
 call plug#begin(g:vimdir . '/plugged')
 "Plug 'Exafunction/windsurf.vim', { 'branch': 'main' }
 Plug 'prabirshrestha/vim-lsp'
-Plug 'prabirshrestha/asyncomplete.vim'
+"Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'tpope/vim-fugitive'
 call plug#end()
 

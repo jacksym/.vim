@@ -3,7 +3,7 @@
 let mapleader="\<Space>"
 
 vnoremap <C-c> "+y
-inoremap <C-v> <Esc>"+Pa
+inoremap <C-v> <Esc>"+pa
 inoremap <M-Backspace> <C-w>
 
 noremap <leader>d <Cmd>E<CR>
