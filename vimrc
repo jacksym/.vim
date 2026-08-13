@@ -35,7 +35,7 @@ let g:netrw_sort_by = 'exten'
 let g:netrw_list_hide = '^\.\.\=/'
 
 if has("win32") || has("win64")
-	set backspace = indent,eol,start
+	"set backspace = indent,eol,start
 elseif has("mac")
     nnoremap <D-]> <C-]>
 endif
