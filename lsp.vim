@@ -1,3 +1,4 @@
+" python
 if executable('pylsp')
     au User lsp_setup call lsp#register_server({
         \ 'name': 'pylsp',
@@ -6,6 +7,7 @@ if executable('pylsp')
         \ })
 endif
 
+" C++
 if executable('clangd')
     au User lsp_setup call lsp#register_server({
         \ 'name': 'clangd',

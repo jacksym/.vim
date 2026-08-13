@@ -35,7 +35,7 @@ let g:netrw_sort_by = 'exten'
 let g:netrw_list_hide = '^\.\.\=/'
 
 if has("win32") || has("win64")
-	set backspace = indent,eol,start
+	"set backspace = indent,eol,start
 elseif has("mac")
     nnoremap <D-]> <C-]>
 endif
@@ -57,7 +57,7 @@ packadd comment
 call plug#begin(g:vimdir . '/plugged')
 "Plug 'Exafunction/windsurf.vim', { 'branch': 'main' }
 Plug 'prabirshrestha/vim-lsp'
-Plug 'prabirshrestha/asyncomplete.vim'
+"Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'tpope/vim-fugitive'
 call plug#end()
 
