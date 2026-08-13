@@ -70,3 +70,10 @@ ln -s ~/myproject-build/compile_commands.json ~/myproject/
 - Visual Studio solution file --> CMake only
 - vim's make
 - recent files?
+
+
+- file permissions DIRED
+- term to open in a current window instead of split
+- DIRED open file in split
+- commend using <corner>+/
+
