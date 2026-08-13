@@ -35,6 +35,7 @@ endfunction
 "  \ foldtext=lsp#ui#vim#folding#foldtext()
 
 
+let g:lsp_diagnostics_enabled = 0
 let g:lsp_diagnostics_echo_cursor = 0
 
 augroup lsp_install
