@@ -49,7 +49,7 @@ let g:vimdir = fnamemodify($MYVIMRC, ':h')
 execute 'source' fnameescape(g:vimdir . '/keymap.vim')
 
 "custom languages
-au BufRead,BufNewFile *.scr	set filetype=STOL
+au BufRead,BufNewFile *.scr	   set filetype=STOL
 au BufRead,BufNewFile *.script set filetype=GMAT
 
 packadd comment
@@ -58,6 +58,7 @@ call plug#begin(g:vimdir . '/plugged')
 "Plug 'Exafunction/windsurf.vim', { 'branch': 'main' }
 Plug 'prabirshrestha/vim-lsp'
 Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 

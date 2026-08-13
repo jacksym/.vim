@@ -13,12 +13,12 @@ set noerrorbells
 set vb t_vb= "gvimrc needs to set this
 
 if has("win32") || has("win64")
-	set guifont=Consolas:h12
+	set guifont=Consolas\ 12
 elseif has("mac")
-	set guifont=Monaco:h14
+	set guifont=Monaco\ 14
 	set macmeta
 elseif has("unix")
-	set guifont=DejaVu\ Sans\ Mono:h13
+	set guifont=Liberation\ Mono\ 12
 endif
 
 set background=dark
