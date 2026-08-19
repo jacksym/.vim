@@ -34,12 +34,6 @@ let g:netrw_sort_direction = "normal"
 let g:netrw_sort_by = 'exten'
 let g:netrw_list_hide = '^\.\.\=/'
 
-if has("win32") || has("win64")
-	"set backspace = indent,eol,start
-elseif has("mac")
-    nnoremap <D-]> <C-]>
-endif
-
 
 "terminal
 tnoremap <Esc> <C-\><C-n>
@@ -56,14 +50,12 @@ packadd comment
 
 call plug#begin(g:vimdir . '/plugged')
 "Plug 'Exafunction/windsurf.vim', { 'branch': 'main' }
+"Plug 'tpope/vim-fugitive'
+Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/vim-lsp'
-"Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'tpope/vim-fugitive'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
 call plug#end()
 
 
 execute 'source' fnameescape(g:vimdir . '/lsp.vim')
 
-inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <cr> pumvisible() ? asyncomplete#close_popup() . "\<cr>" : "\<cr>"

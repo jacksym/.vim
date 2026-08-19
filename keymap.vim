@@ -2,14 +2,12 @@
 
 let mapleader="\<Space>"
 
-vnoremap <C-c> "+y
-inoremap <C-v> <Esc>"+pa
 inoremap <M-Backspace> <C-w>
-
-noremap <leader>d <Cmd>E<CR>
-noremap - <Cmd>E<CR>
-noremap <leader>f :e<Space>
 cnoremap <M-Backspace> <C-W>
+
+noremap - <Cmd>E<CR>
+" noremap <leader>f :e<Space>
+" noremap <leader>d <Cmd>E<CR>
 noremap <leader><leader> :b<Space>
 
 noremap <leader>i <Cmd>execute 'edit ' . fnameescape(g:vimdir) . '/'<CR>
@@ -28,6 +26,23 @@ noremap <leader>wH <C-w>H
 noremap <leader>wJ <C-w>J
 noremap <leader>wK <C-w>K
 noremap <leader>wL <C-w>L
+
+" os peculiar
+if has ('macunix')
+    vnoremap <D-c> "+y
+    inoremap <D-v> <Esc>"+pa
+    inoremap <D-Backspace> <C-w>
+    nnoremap <D-]> <C-]>
+    nmap <D-/> <Plug>(comment-toggle-line)j0
+    xmap <D-/> <Plug>(comment-toggle)
+else
+    vnoremap <C-c> "+y
+    inoremap <C-v> <Esc>"+pa
+    nmap <C-/> <Plug>(comment-toggle-line)j0
+    xmap <C-/> <Plug>(comment-toggle)
+endif
+
+
 
 nnoremap <leader>gl <Cmd>vimgrep /<C-R><C-W>/gj **/*<CR><Cmd>copen<CR>
 vnoremap <leader>gl y<Cmd>execute 'vimgrep /' . escape(@", '/\') . '/gj **/*'<CR><Cmd>copen<CR>
@@ -50,22 +65,5 @@ function! VimgrepPrompt() abort
   endfunction
 
 nnoremap <leader>gg <Cmd>call VimgrepPrompt()<CR>
-
-
-"function! ToggleComment() abort
-"
-"    if !exists('b:comment_start')
-"        echoerr 'No b:comment_start set for this filetype'
-"        return
-"    endif
-"    let l:cs = escape(b:comment_start, '\&')
-"    let l:line = getline('.')
-"    if l:line =~# '^\s*' . escape(b:comment_start, '\.*[]~')
-"        execute 's/^\(\s*\)' . l:cs . '\s\?/\1/'
-"    else
-"        call setline('.', substitute(l:line, '^\s*', '&' . b:comment_start . ' ', ''))
-"    endif
-"
-"endfunction
 
 
