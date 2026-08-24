@@ -33,12 +33,12 @@ if has ('macunix')
     inoremap <D-v> <Esc>"+pa
     inoremap <D-Backspace> <C-w>
     nnoremap <D-]> <C-]>
-    nmap <D-/> <Plug>(comment-toggle-line)j0
+    nmap <D-/> <Plug>(comment-toggle-line)j^
     xmap <D-/> <Plug>(comment-toggle)
 else
     vnoremap <C-c> "+y
     inoremap <C-v> <Esc>"+pa
-    nmap <C-/> <Plug>(comment-toggle-line)j0
+    nmap <C-/> <Plug>(comment-toggle-line)j^
     xmap <C-/> <Plug>(comment-toggle)
 endif
 

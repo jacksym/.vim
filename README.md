@@ -1,5 +1,12 @@
 # My Personal Vim Configuration
 
+## Install Plugins
+
+```
+:PlugInstall
+```
+
+
 ## Windows Housekeeping
 ### Ensure that a $HOME variable is set
 1. Start\>Edit the system environment variables:

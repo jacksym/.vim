@@ -34,13 +34,9 @@ let g:netrw_sort_direction = "normal"
 let g:netrw_sort_by = 'exten'
 let g:netrw_list_hide = '^\.\.\=/'
 
-
 "terminal
 tnoremap <Esc> <C-\><C-n>
 tnoremap <C-c> "+y
-
-let g:vimdir = fnamemodify($MYVIMRC, ':h')
-execute 'source' fnameescape(g:vimdir . '/keymap.vim')
 
 "custom languages
 au BufRead,BufNewFile *.scr	   set filetype=STOL
@@ -48,14 +44,20 @@ au BufRead,BufNewFile *.script set filetype=GMAT
 
 packadd comment
 
+let g:vimdir = fnamemodify($MYVIMRC, ':h')
+" to forego plug,
+" delete plugged/, manually add packages through
+" ~/.vim/pack/plug/start/<plugin>
 call plug#begin(g:vimdir . '/plugged')
 "Plug 'Exafunction/windsurf.vim', { 'branch': 'main' }
-"Plug 'tpope/vim-fugitive'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
+"Plug 'epheien/termdbg'
+"Plug 'tpope/vim-fugitive'
 call plug#end()
 
-
+execute 'source' fnameescape(g:vimdir . '/keymap.vim')
 execute 'source' fnameescape(g:vimdir . '/lsp.vim')
+"execute 'source' fnameescape(g:vimdir . '/debugger.vim')
 

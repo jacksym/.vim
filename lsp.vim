@@ -30,28 +30,59 @@ function! s:on_lsp_buffer_enabled() abort
     nmap <buffer> <leader>. <plug>(lsp-code-action)
     nmap <buffer> <M-k> <plug>(lsp-previous-diagnostic)
     nmap <buffer> <M-j> <plug>(lsp-next-diagnostic)
+    nmap <buffer> <M-K> <plug>(lsp-previous-error)
+    nmap <buffer> <M-J> <plug>(lsp-next-error)
 
 
-" Definition	F12	Go To Definition
-" Declaration	Ctrl+F12	Primarily C++; availability depends on language
-" Type definition	F12	Visual Studio has no separate “Type Definition” command—use Go To Definition on the type
-" Implementation	Ctrl+F12	Context/language-sensitive; overlaps with Go To Declaration
-" References	Shift+F12	Find All References
-" Hover/documentation	Ctrl+K, Ctrl+I	Quick Info
-" Request signature help manually	Ctrl+Shift+Space	Parameter Info
-" Search document symbols	Ctrl+F2	Focuses the editor Navigation Bar for types/members in the current document
-" Search workspace symbols	Ctrl+1, Ctrl+S	Go To Symbol; Ctrl+T, Ctrl+,, or Ctrl+P opens broader Go To All/Code Search
-" Rename	Ctrl+R, Ctrl+R	Rename code symbol in C#/VB
-" Code actions	Ctrl+.	Quick Actions and Refactorings
-" Previous diagnostic	Alt+Page Up	Previous issue in the current file
-" Next diagnostic	Alt+Page Down	Next issue in the current file
-" Previous Error List item	Shift+F8	Navigates the Error List/Output locations
-" Next Error List item	F8	Navigates the Error List/Output locations
-" List document diagnostics	Ctrl+\, E or Ctrl+\, Ctrl+E	Opens Error List; then set its scope to Current Document
-" Format document	Ctrl+K, Ctrl+D	
-" Format selection	Ctrl+K, Ctrl+F	
-" LSP status	No default mapping	Visual Studio has no generic user-facing “LSP Status” command equivalent to editors such as Neovim or VS Code
-
+    "straight VS analog
+    nmap <buffer> <leader>kt    <plug>(lsp-call-hierarchy-incoming)
+    nmap <buffer> <leader>kt    <plug>(lsp-call-hierarchy-outgoing)
+    nmap <buffer> <leader>.     <plug>(lsp-code-action)
+    "nmap <buffer> <leader>>    <plug>(lsp-code-action-float)
+    nmap <buffer> <leader>>     <plug>(lsp-code-action-preview)
+    nmap <buffer> <leader>k`    <plug>(lsp-code-lens)
+    nmap <buffer> <leader><F12> <plug>(lsp-declaration)
+    " nmap <buffer> <M-F12>       <plug>(lsp-peek-declaration)
+    nmap <buffer> <F12>         <plug>(lsp-definition)
+    nmap <buffer> <M-F12>       <plug>(lsp-peek-definition)
+    nmap <buffer> <leader><F2>  <plug>(lsp-document-symbol)
+    nmap <buffer> <leader><F2>  <plug>(lsp-document-symbol-search)
+    nmap <buffer> <leader>\\e   <plug>(lsp-document-diagnostics)
+    nmap <buffer> <leader>ki    <plug>(lsp-hover)
+    " nmap <buffer> <leader>ki    <plug>(lsp-hover-float)
+    " nmap <buffer> <leader>ki    <plug>(lsp-hover-preview)
+    nmap <buffer> <M-PageDown>  <plug>(lsp-next-diagnostic)
+    nmap <buffer> <M-PageUp>    <plug>(lsp-next-diagnostic-nowrap)
+    nmap <buffer> <F8>          <plug>(lsp-next-error)
+    " nmap <buffer> <F8>          <plug>(lsp-next-error-nowrap)
+    nmap <buffer> <plug>(lsp-next-reference)
+    nmap <buffer> <plug>(lsp-next-warning)
+    nmap <buffer> <plug>(lsp-next-warning-nowrap)
+    nmap <buffer> <plug>(lsp-preview-close)
+    nmap <buffer> <plug>(lsp-preview-focus)
+    nmap <buffer> <plug>(lsp-previous-diagnostic)
+    nmap <buffer> <plug>(lsp-previous-diagnostic-nowrap)
+    nmap <buffer> <plug>(lsp-previous-error)
+    nmap <buffer> <plug>(lsp-previous-error-nowrap)
+    nmap <buffer> <plug>(lsp-previous-reference)
+    nmap <buffer> <plug>(lsp-previous-warning)
+    nmap <buffer> <plug>(lsp-previous-warning-nowrap)
+    nmap <buffer> <S-F12>      <plug>(lsp-references)
+    nmap <buffer> <plug>(lsp-rename)
+    nmap <buffer> <plug>(lsp-workspace-symbol)
+    nmap <buffer> <plug>(lsp-workspace-symbol-search)
+    nmap <buffer> <plug>(lsp-document-format)
+    vmap <buffer> <plug>(lsp-document-format)
+    nmap <buffer> <plug>(lsp-document-range-format)
+    xmap <buffer> <plug>(lsp-document-range-format)
+    nmap <buffer> <plug>(lsp-implementation)
+    nmap <buffer> <plug>(lsp-peek-implementation)
+    nmap <buffer> <plug>(lsp-type-definition)
+    nmap <buffer> <plug>(lsp-peek-type-definition)
+    nmap <buffer> <plug>(lsp-type-hierarchy)
+    nmap <buffer> <plug>(lsp-status)
+    nmap <buffer> <plug>(lsp-signature-help)
+        
 
 
 
