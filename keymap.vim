@@ -65,5 +65,3 @@ function! VimgrepPrompt() abort
   endfunction
 
 nnoremap <leader>gg <Cmd>call VimgrepPrompt()<CR>
-
-
