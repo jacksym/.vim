@@ -46,8 +46,8 @@ endif
 
 nnoremap <leader>gl <Cmd>vimgrep /<C-R><C-W>/gj **/*<CR><Cmd>copen<CR>
 vnoremap <leader>gl y<Cmd>execute 'vimgrep /' . escape(@", '/\') . '/gj **/*'<CR><Cmd>copen<CR>
-nnoremap gn <Cmd>cnext<CR>
-nnoremap gp <Cmd>cprev<CR>
+nnoremap gj <Cmd>cnext<CR>
+nnoremap gk <Cmd>cprev<CR>
 
 function! VimgrepPrompt() abort
     call inputsave()

@@ -6,6 +6,7 @@ setlocal number
 
 setlocal colorcolumn=80
 
+setlocal cursorline
 
 " compile_commands.json
 " cmake -S . -B build -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
