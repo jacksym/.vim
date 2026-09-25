@@ -7,4 +7,4 @@ setlocal cursorline
 setlocal expandtab
 
 
-noremap <buffer> <leader>c :w<CR>:!python3 %<CR>
+setlocal makeprg=python3\ %

@@ -27,7 +27,8 @@ set expandtab
 
 let g:netrw_keepdir = 1
 let g:netrw_banner = 0
-let g:netrw_liststyle = 0 "g:netrw_liststyle=1 significantly messes with sorting/hiding
+let g:netrw_liststyle = 0
+"g:netrw_liststyle=1 significantly messes with sorting/hiding
 let g:netrw_altv = 1
 let g:netrw_sort_options = "i"
 let g:netrw_sort_direction = "normal"
@@ -38,6 +39,7 @@ let g:netrw_list_hide = '^\.\.\=/'
 tnoremap <Esc> <C-\><C-n>
 tnoremap <C-c> "+y
 
+au BufRead,BufNewFile *.cpp,*.c,*.cxx set filetype=cxx
 "custom languages
 au BufRead,BufNewFile *.scr	   set filetype=STOL
 au BufRead,BufNewFile *.script set filetype=GMAT
@@ -54,10 +56,8 @@ Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'tpope/vim-fugitive'
-"Plug 'epheien/termdbg'
 call plug#end()
 
 execute 'source' fnameescape(g:vimdir . '/keymap.vim')
 execute 'source' fnameescape(g:vimdir . '/lsp.vim')
 "execute 'source' fnameescape(g:vimdir . '/debugger.vim')
-
