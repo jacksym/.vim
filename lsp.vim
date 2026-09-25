@@ -85,7 +85,7 @@ let g:lsp_diagnostics_float_cursor = 0
 let g:lsp_diagnostics_virtual_text_enabled = 1
 let g:lsp_diagnostics_virtual_text_align = 'after'
 let g:lsp_diagnostics_virtual_text_padding_left = 4
-let g:lsp_diagnostics_virtual_text_delay = 2000
+" let g:lsp_diagnostics_virtual_text_delay = 2000
 
 augroup lsp_install
     au!

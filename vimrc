@@ -53,8 +53,8 @@ call plug#begin(g:vimdir . '/plugged')
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'tpope/vim-fugitive'
 "Plug 'epheien/termdbg'
-"Plug 'tpope/vim-fugitive'
 call plug#end()
 
 execute 'source' fnameescape(g:vimdir . '/keymap.vim')
