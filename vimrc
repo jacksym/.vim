@@ -20,6 +20,8 @@ set splitbelow
 set splitright
 autocmd Filetype *.vim setlocal number
 
+set errorformat=%f:\ line\ %l:\ %m
+
 "set smartindent
 set tabstop=4 softtabstop=4
 set shiftwidth=4
