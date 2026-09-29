@@ -1,3 +1,4 @@
+let g:python_dist = exepath('python')
 " python
 if executable('pylsp')
     au User lsp_setup call lsp#register_server({
