@@ -4,8 +4,13 @@ if executable('pylsp')
         \ 'name': 'pylsp',
         \ 'cmd': {server_info->['pylsp']},
         \ 'allowlist': ['python'],
+        \ 'workspace_config': {
+        \    'pylsp': { 'plugins': { 'jedi': { 'environment': g:python_dist } } }
+        \ }
         \ })
 endif
+
+
 
 " C++
 if executable('clangd')
