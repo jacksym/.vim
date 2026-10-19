@@ -1,16 +1,11 @@
-let g:python_dist = exepath('python')
 " python
 if executable('pylsp')
     au User lsp_setup call lsp#register_server({
         \ 'name': 'pylsp',
-        \ 'cmd': {server_info->['pylsp']},
+        \ 'cmd': {server_info -> [g:python_dist, '-m', 'pylsp']},
         \ 'allowlist': ['python'],
-        \ 'workspace_config': {
-        \    'pylsp': { 'plugins': { 'jedi': { 'environment': g:python_dist } } }
-        \ }
         \ })
 endif
-
 
 
 " C++

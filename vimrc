@@ -46,6 +46,16 @@ au BufRead,BufNewFile *.cpp,*.c,*.cxx set filetype=cxx
 au BufRead,BufNewFile *.scr	   set filetype=STOL
 au BufRead,BufNewFile *.script set filetype=GMAT
 
+if has("win32") || has("win64")
+    let g:python_dist = 'C:\Users\jackj\AppData\Local\Programs\Python\Python314\python.exe',
+    " let g:python_dist = 'C:\Users\jackj\AppData\Local\Programs\Python\Python313\python.exe',
+    " let g:python_dist = 'C:\Users\jackj\AppData\Local\Programs\Python\Python310\python.exe',
+elseif has("mac")
+    let g:python_dist = "/opt/homebrew/bin/python3.14"
+elseif has("unix")
+endif
+
+
 packadd comment
 
 let g:vimdir = fnamemodify($MYVIMRC, ':h')
