@@ -2,8 +2,6 @@
 
 let mapleader="\<Space>"
 
-inoremap <M-Backspace> <C-w>
-cnoremap <M-Backspace> <C-W>
 
 noremap - <Cmd>E<CR>
 " noremap <leader>f :e<Space>
@@ -35,11 +33,18 @@ if has ('macunix')
     nnoremap <D-]> <C-]>
     nmap <D-/> <Plug>(comment-toggle-line)j^
     xmap <D-/> <Plug>(comment-toggle)
-else
+    inoremap <D-Backspace> <C-w>
+    cnoremap <D-Backspace> <C-W>
+elseif has("win32") || has("win64")
     vnoremap <C-c> "+y
     inoremap <C-v> <Esc>"+pa
     nmap <C-/> <Plug>(comment-toggle-line)j^
     xmap <C-/> <Plug>(comment-toggle)
+    inoremap <C-Backspace> <C-w>
+    cnoremap <C-Backspace> <C-W>
+elseif has("unix")
+    inoremap <C-Backspace> <C-w>
+    cnoremap <C-Backspace> <C-W>
 endif
 
 
