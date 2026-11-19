@@ -51,8 +51,10 @@ if has("win32") || has("win64")
     " let g:python_dist = 'C:\Users\jackj\AppData\Local\Programs\Python\Python313\python.exe',
     " let g:python_dist = 'C:\Users\jackj\AppData\Local\Programs\Python\Python310\python.exe',
 elseif has("mac")
-    let g:python_dist = "/opt/homebrew/bin/python3.14"
+    " let g:python_dist = "/opt/homebrew/bin/python3.14"
 elseif has("unix")
+    " let g:python_dist = "/usr/bin/python3"
+    let g:python_dist = "/home/jack/py_venv/blender5.2_api/bin/python"
 endif
 
 

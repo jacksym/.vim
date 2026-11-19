@@ -1,5 +1,5 @@
 " python
-if executable('pylsp')
+if executable(g:python_dist)
     au User lsp_setup call lsp#register_server({
         \ 'name': 'pylsp',
         \ 'cmd': {server_info -> [g:python_dist, '-m', 'pylsp']},
