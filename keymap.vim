@@ -43,6 +43,10 @@ elseif has("win32") || has("win64")
     inoremap <C-Backspace> <C-w>
     cnoremap <C-Backspace> <C-W>
 elseif has("unix")
+    vnoremap <C-c> "+y
+    inoremap <C-v> <Esc>"+pa
+    nmap <C-/> <Plug>(comment-toggle-line)j^
+    xmap <C-/> <Plug>(comment-toggle)
     inoremap <C-Backspace> <C-w>
     cnoremap <C-Backspace> <C-W>
 endif

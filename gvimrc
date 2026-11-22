@@ -7,7 +7,7 @@ set autochdir
 
 filetype plugin on
 
-colorscheme catppuccin
+colorscheme solarized
 
 set noerrorbells
 set vb t_vb= "gvimrc needs to set this
